@@ -1,8 +1,8 @@
 
-title: Hacker theme
-description: Hacker is a theme for GitHub Pages.
+title: "CPH-SEC"
+description: "CPH Ethical Hacking Society"
 show_downloads: true
 google_analytics:
 =======
 >>>>>>> origin/master
-theme: jekyll-theme-hacker
+theme: "jekyll-theme-hacker"
