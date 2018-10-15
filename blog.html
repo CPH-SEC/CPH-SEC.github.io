@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <script src="document.min.js" userjs="user.js" icon="favicon.ico" id="DOC" onerror="var l=document.createElement('link'),s=document.createElement('script');l.rel='stylesheet';l.href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css';l.id='bootstrap.css';l.auto='1';document.head.insertBefore(l,document.getElementById('DOC'));s.src='http://aplib.github.io/document.min.js';document.head.appendChild(s);"></script>
+</head>
+<body>
+
+
+<!--content-panel
+
+## Blog
+
+[panel success header="New features"]
+
+#### 2014/01/09
+[CML revision 2](/docs/CML.html)  
+Updated to Bootstrap 3.0.3
+
+#### 2013/11/19
+Updated to Bootstrap 3.0.2
+
+#### 2013/11/02
+Page editor started in beta mode. Ctrl+F12 or ?edit parameter to open editor.
+
+#### 2013/10/16
+Code highlighting component started
+
+#### 2013/10/03
+Built-in footer-layout component started.
+
+#### 2013/9/30
+Start built-in page-layout component. This page layout manager allows you customize page layout.
+
+#### 2013/9/20
+Bootstrap compatible navigation bar. With the **navbar** component can now be added a full version of bootstrap navigation bar as the main navigation.
+
+#### 2013/9/20
+Moved scripts codebase to [GitHub](http://aplib.github.io/).
+You can copy the page template.html, add text and instantly view in the browser,  without any script files and styles.
+If the script is not specified or is not available, it will be loaded from the network.
+
+#### 2013/9/15 The test results indexing of the site in Google
+
+1. Content is indexed properly and is visible in the search results
+2. Crawler does not see internal links on the site, had to add a sitemap.xml and only after that the inside pages were indexed.&ast;  
+
+&ast; Actually, there are two ways for proper indexing in Google - sitemap.xml and script generation of static html pages. 
+Both methods are available, but it seemed to me sitemap.xml generation is more convenient, no need to create a lot of files.
+To generate a sitemap template added a special page sitemap.html
+
+[/panel]
+
+[panel danger header="Last breaking changes"]
+
+#### 2014/01/09
+[CML revision 2](/docs/CML.html)
+
+#### 2013/11/02 user.js now is optional due to security issue 
+
+Default loading user.js disabled. user.js option is now in the html code as the 'user.js' attribute, example:<br>
+&lt;script src="document.min.js" userjs="user.js" icon="favicon.ico" ...
+
+#### 2013/10/16 Renamed defer initialization queue:
+
+window.clq12604 -> window.defercqueue
+
+[/panel]-->
+
+
+
+
+
+<!--right-side-panel
+<div id="disqus_thread" style="margin-top:50px;"></div>
+-->
+<script src="//markdocs.disqus.com/embed.js" async=""></script>
+
+<noscript><div class="alert alert-warning">This Website requires your browser to be JavaScript enabled.</div></noscript>
+
+
+
+</body>
+</html>

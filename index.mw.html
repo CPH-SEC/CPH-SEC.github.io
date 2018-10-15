@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Markdown webdocs</title>
+    <script src="document.min.js" userjs="user.js" icon="favicon.ico" id="DOC" onerror="var l=document.createElement('link'),s=document.createElement('script');l.rel='stylesheet';l.href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css';l.id='bootstrap.css';l.auto='1';document.head.insertBefore(l,document.getElementById('DOC'));s.src='http://aplib.github.io/document.min.js';document.head.appendChild(s);"></script>
+</head>
+<body>
+
+
+<!--content-panel
+Markdown webdocs is the technology of building a web site from web components by writing special markup [Component Markdown Language](./docs/CML.html).
+It was initially designed for writing documentation and help system, now allows you to create sites with complex [layout](./docs/layout.html).
+
+Written so the site can be compiled into a fully compliant HTML or published without compilation. For example, the home page of this site is compiled in HTML, other pages is client-side translated CML form.
+
+To edit pages on the site has built-in editor. You can organize online editing or modifying local files and then publish the changes. Local edits using the integrated editor is easier to make with node-webkit. When using VCS is very easy to control your changes as human-readable diffs.
+
+This template was created using the original bundle of the libraries jquery.js, bootstrap and controls.js
+
+Easy content editing and management structure of the site, great download speed and the ability to host it anywhere, powerful JavaScript environment allows you to create a dynamic documents and sites without restrictions.
+
+[Wiki: Markdown](http://en.wikipedia.com/wiki/Markdown)
+
+
+[iblock`-webkit-transform:scale(2,2) rotate(3deg); -webkit-transform-origin:left; transform:scale(2,2) rotate(3deg); transform-origin:left; margin:20px 0;]```+Additional```[/iblock]  
+[iblock`-webkit-transform:scale(2,2) rotate(-3deg); -webkit-transform-origin:left; margin:20px 111px;]***formatting options***[/iblock]  
+[collapse header="and web components" info`display:inline-block]
+The best solution for writing documentation.
+[/collapse]
+
+## Get started
+
+Download and edit <a href="page template.html" download="page template.html">page template.html</a>
+
+## Installation
+
+* ### <a class="label label-success" href="http://aplib.github.io/markdown-site-template/markdown-site-template.zip">Download template from GitHub</a>
+
+Required files:
+
+* index.html
+* bootstrap.css
+* document.min.js
+* user.js
+
+Options:
+
+* components/
+ * [Carousel](http://aplib.github.io/markdown-site-template/components/controls.carousel.html)
+ * [Emoji](http://aplib.github.io/markdown-site-template/components/controls.emoji.html)
+ * [YouTube Player](http://aplib.github.io/markdown-site-template/components/YouTube.Player.html)
+ * [Mediawiki markup](http://aplib.github.io/markdown-site-template/components/wiki.instaview.html)
+ * [MathJax](http://aplib.github.io/markdown-site-template/components/controls.math.html)
+* mods/
+ * [MSDN-like theme](http://aplib.github.io/markdown-site-template/mods/msdn-like-theme.html)
+
+
+
+## Edit site
+
+New pages are added by copying the file "page template.html".  
+Section of the document, such as a navigation bar, body text, header or footer, placed on the panels that having a predetermined behavior.
+To create a panel insert the brackets <code>&lt;--nameofpanel ... --&gt;</code> in the body of the html page.
+If the name of the panel from a predefined list, this panel has a behavior.
+For example a panel named fixed-top-panel is always visible when the document scrolls.
+If you create a panel with a unique name, the behavior you can assign using css.
+
+In the panels you can add marked text, components to display graphical elements or components for appearance or behavior of the site.
+
+ example:
+<pre><code>[encode][off]<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Example</title>
+    <script src="document.min.js" userjs="user.js" icon="favicon.ico" id="DOC" onerror="var l=document.createElement('link'),s=document.createElement('script');l.rel='stylesheet';l.href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css';l.id='bootstrap.css';l.auto='1';document.head.insertBefore(l,document.getElementById('DOC'));s.src='http://aplib.github.io/document.min.js';document.head.appendChild(s);"></script>
+</head>
+<body>
+    
+&lt;!--fixed-top-bar
+[navbar]
+* [Home](index.html)
+* [Page1](page1.html)
+* [Page2](page1.html)
+[/navbar]
+--&gt;
+
+&lt;!--header-panel
+# Insert header here
+site description
+--&gt;
+
+&lt;!--content-panel
+# content text
+## content text
+### content text
+#### content text
+--&gt;
+
+&lt;!--footer-panel
+footer here
+--&gt;
+
+<noscript><div class="alert alert-warning">This Website requires your browser to be JavaScript enabled.</div></noscript>
+</body>
+</html>
+[/off][/encode]</code></pre>
+
+## Customize site
+
+You can customize the appearance of the site by applying to the page any twitter bootstrap compatible theme.
+In the menu Mods you can see examples of themes, these themes are taken from the site http://bootswatch.com/.
+Examples of components are available in the menu Components.-->
+
+
+
+
+
+
+
+
+
+<!--right-side-panel -->
+
+
+<noscript><div class="alert alert-warning">This Website requires your browser to be JavaScript enabled.</div></noscript>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

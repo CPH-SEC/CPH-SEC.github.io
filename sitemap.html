@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>sitemap.xml</title>
+    <script src="document.min.js" userjs="user.js" icon="favicon.ico" id="DOC" onerror="var l=document.createElement('link'),s=document.createElement('script');l.rel='stylesheet';l.href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css';l.id='bootstrap.css';l.auto='1';document.head.insertBefore(l,document.getElementById('DOC'));s.src='http://aplib.github.io/document.min.js';document.head.appendChild(s);"></script>
+</head>
+<body>
+<!--header-panel
+# sitemap.xml generator
+-->
+<!--content-panel
+
+-->
+
+<script>
+    
+    $DOC.onload(function()
+    {
+        // Create input form
+        
+        var input;
+        $DOC.cbody['content-panel'].add('form:bootstrap.Form`form-horizontal', function(form) {
+            form.add('bootstrap.FormGroup', function(group) {
+                
+                group.add('bootstrap.ControlLabel`col-sm-2', 'Site url:');
+                input = 
+                    group.add('div`col-sm-8')
+                    .add('input:bootstrap.ControlInput', {value:$DOC.root, placeholder:'Enter site root url'});
+                
+                group.add('a`btn btn-primary col-sm-2', 'Create sitemap', {type:'submit', href:'#', download: 'sitemap.xml'})
+                .listen('click', create_sitemap);
+            });
+        });
+        
+        // restore last used rootpath
+        
+        try {
+            input.value = localStorage.getItem('rootpath');
+        } catch (e) {}
+        
+        $DOC.cbody['content-panel'].refresh();
+        
+        // Create sitemap button click handler
+        function create_sitemap(event) {
+            
+            var rootpath = input.value;
+            if (!rootpath)
+                return;
+            
+            try {
+                localStorage.setItem('rootpath', rootpath);
+            } catch (e) {}
+            
+            var allrefs = {},
+                sitemap = 
+'<?xml version="1.0" encoding="UTF-8"?>\n\
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\
+<url>\n\
+<loc>' + rootpath + '</loc>\n\
+</url>\n\
+';
+            function addref(url) {
+                
+                var url = (url || '').split('#')[0];
+                if (!url || allrefs[url.toLowerCase()])
+                    return;
+                
+                allrefs[url.toLowerCase()] = true;
+                
+                if (url.indexOf('//') >= 0) {
+                    console.log('url: ' + url + ' is absolute, skipped.');
+                }
+                else
+                {
+                    var abs_url = rootpath + url;
+                    console.log('url: ' + url + ' --> ' + abs_url);
+                    sitemap += '<url>\n<loc>' + abs_url + '</loc>\n</url>\n';
+                }
+            }
+            
+            addref(rootpath);
+            $('body').find('.navbar a').each(function(i,el)
+            {
+                addref(el.getAttribute('href'));
+            });
+
+            sitemap += '</urlset>';
+
+            this.element.href = 'data:application/octet-stream;charset=utf-8,' + encodeURIComponent(sitemap);
+            this.element.download = 'sitemap.xml';
+        }
+    });    
+</script>
+
+
+<noscript><div class="alert alert-warning">This Website requires your browser to be JavaScript enabled.</div></noscript>
+</body>
+</html>

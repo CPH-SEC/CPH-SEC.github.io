@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>CML (Component Markdown Language)</title>
+    <script src="../document.min.js" userjs="user.js" icon="favicon.ico" id="DOC" onerror="var l=document.createElement('link'),s=document.createElement('script');l.rel='stylesheet';l.href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css';l.id='bootstrap.css';l.auto='1';document.head.insertBefore(l,document.getElementById('DOC'));s.src='http://aplib.github.io/document.min.js';document.head.appendChild(s);"></script>
+</head>
+<body>
+
+
+<!--header-panel
+
+# CML (Component Markdown Language) revision 2
+### markdown + html + components
+-->
+
+
+<!--content-panel
+
+CML is an extension of the html and markdown markup for inclusion of visual components.
+
+### bbCode syntax (new)
+
+>```[Component definition] ... [/namespace.comtype]```  
+>```[off][Component definition/][/off]```  
+
+example: ```[off][bootstrap.Button size=-2]OK[/bootstrap.Button][/off]```  [bootstrap.Button size=-2]OK[/bootstrap.Button]  
+example: ```[off][h4#example-header`color:#428BCA;] example text [/h4][/off]```  [h4#example-header`color:#428BCA;] example text [/h4]
+
+### Component definition (changed)
+
+> ```name:namespace.comtype parameters /inheritable parameters #identifier `class1 classN style```
+
+example: ```span`warning-header font-weight:bold;```
+
+All parts are optional except comtype.
+
+[defl]
+--name
+Name of the component within the parent collection.
+--namespace.comtype
+Registered component or factory function type. Namespace default value is "controls". Most predefined component registered to default namespace "controls" and can be used without a namespace.
+--parameters
+Сomponent parameters. A list of key=value or key="values with spaces" pairs separated by spaces. If no value is specified, the value defaults to boolean true.
+--inheritable parameters
+Parameters determined after '/' will apply to child components.
+--identifier
+Identifier of the component.
+--classes and style
+Additional css classes and style.
+[/defl]
+
+
+### Defining CML section in html document
+
+>```[decode]&#60;!--sectionname ... --&#62;[/decode]```
+
+Where sectionname is any valid identifier. Allowed in context of the html document or in $DOC.parseContent() argument text.
+
+In the final html document it is translated to a div: ```<div class="sectionname"> ... </div>``` and you can use one from a set of predefined names for that would determine the location and behavior of this section.
+
+ example:
+
+    [decode][off]&#60;!--right-side-panel
+    Example Navigation:
+    * [Layout](#layout)
+    * [Default layout scheme](#default-layout-scheme)
+    --&#62;[/off][/decode]
+
+```$DOC.order``` determine the order of the first level sections for which placement in the document is undefined.
+
+#### Section placeholder
+
+>```[decode] &#60;!--sectionname--&#62; [/decode]```  
+
+Placeholder for previously defined section
+
+#### Section remover
+
+>```[decode] &#60;!--!sectionname--&#62; [/decode]```  
+
+Remove previously defined section
+
+#### Inserting a component in non body part of html document
+
+>```[decode]&#60;!--[Component definition] ... --&#62;[/decode]```
+
+#### Markup nesting, component content
+
+Base of CML is a markdown markup. Inside the markdown markup, you can use html and bbCode tags. The text inside the bbCode is the responsibility of the component, different components translate content text in different ways.
+
+example:
+
+    [off][math tex]
+     \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} =
+     1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}
+     {1+\frac{e^{-8\pi}} {1+\ldots} } } }
+    [/math]
+
+    [defl]
+
+    --name
+    Name of the component within the parent collection.
+
+    --namespace.comtype
+    Registered component type. 
+
+    [/defl]
+    [/off]
+
+Most components translate inner text as CML.
+
+#### CML components
+
+In CML is defined syntax, but is not defined set of components. bbCode tags resolved runtime. There are certain basic set of components (such as [block]), other components can be connected placed as external .js files in /components folder.-->
+
+
+
+
+
+<!--right-side-panel
+<div id="disqus_thread"></div>
+-->
+<script src="//markdocs.disqus.com/embed.js" async=""></script>
+
+<noscript><div class="alert alert-warning">This Website requires your browser to be JavaScript enabled.</div></noscript>
+</body>
+</html>

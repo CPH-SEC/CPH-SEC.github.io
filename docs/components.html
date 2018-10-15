@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Components</title>
+    <script src="../document.min.js" userjs="user.js" icon="favicon.ico" id="DOC" onerror="var l=document.createElement('link'),s=document.createElement('script');l.rel='stylesheet';l.href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css';l.id='bootstrap.css';l.auto='1';document.head.insertBefore(l,document.getElementById('DOC'));s.src='http://aplib.github.io/document.min.js';document.head.appendChild(s);"></script>
+</head>
+<body>
+<!--content-panel
+
+# Components
+
+## Overview
+
+Component in Markdown webdocs is a control in terms controls.js organized into separate module and provided with additional resources.
+
+A component has parameters, attributes, may contain data, template function for generate html code and, of course, those properties and methods that we define in its code.
+
+Basic set of components built into document.js and is available immediately after initialization. Other components are loaded when processing bbCode or loaded by scripts on the page.
+
+### Hello World!
+[highlight lang=javascript style=vs]function HelloWorld(parameters, attributes) {
+  this.initialize('hello', parameters, attributes,
+      $ENV.getDefaultTemplate('div'), $ENV.getDefaultTemplate());
+
+  this.text('# Hello World!'); // ← Markdown
+};
+HelloWorld.prototype = $ENV.controls.control_prototype;
+controls.typeRegister('hello', HelloWorld);[/highlight]
+
+What would be a constructor function has become a component in Markdown webdocs, must meet several conditions:
+
+* In the prototype chain to have controls.control_prototype, it gives a general properties and methods.
+* The function must be registered by calling controls.typeRegister() or controls.factoryRegister()
+* In the constructor function is required to call this.initialize()
+* It is desirable to initialize assign specific templates that understand the layout Markdown. $ENV.getDefaultTemplate('div') and $ENV.getDefaultTemplate() are such templates that is compatible with Markdown webdocs and can be used in most custom components.
+
+#### Variability
+
+The main purpose of the parameters - choice of modification of the component. Modification may be a different view of the same component or may be a separate component.
+Parameters are also can be used for passing attribute values​​, where it is convenient.
+
+Example: ```[off][page-layout scheme=centered /][/off]``` - here is a scheme parameter allows you to choose modification that for this component selection of the page layout.
+
+#### Generate HTML code, DOM management, responding to events,
+For this basic library provides the appropriate
+functionality that reduces the amount of code required.
+In the simplest case, the developer does not need to do anything , when you create a component already has a default template and appropriate behavior.
+
+
+-->
+
+
+<!--right-side-panel
+<div id="disqus_thread"></div>
+-->
+<script src="//markdocs.disqus.com/embed.js" async=""></script>
+
+<noscript><div class="alert alert-warning">This Website requires your browser to be JavaScript enabled.</div></noscript>
+
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Simple Markdown site template - Layout</title>
+    <script src="../document.min.js" userjs="user.js" icon="favicon.ico" id="DOC" onerror="var l=document.createElement('link'),s=document.createElement('script');l.rel='stylesheet';l.href='http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css';l.id='bootstrap.css';l.auto='1';document.head.insertBefore(l,document.getElementById('DOC'));s.src='http://aplib.github.io/document.min.js';document.head.appendChild(s);"></script>
+</head>
+<body>
+
+<!--[block`header-panel padding:27px 50px 0px 50px;]
+# Markdown webdocs
+### Simple Markdown site template-->
+
+<!--fixed-top-bar->header-panel-->
+
+
+<!--left-side-panel
+
+### Predefined layout elements:
+
+In the following list, elements ends with \*-bar have no padding and margin, elements ends with \*-panel have inner padding:
+
+#### fixed-top-panel,
+#### fixed-top-bar
+Horizontal bar or panel fixed at the upper edge of page, always visible, not scrolled.
+
+#### fixed-left-side-panel,
+#### fixed-left-side-bar
+Vertical bar or panel fixed at the left edge of page, always visible, not scrolled.
+
+#### header-panel,
+#### header-bar
+Panel at the top of page, scrolls with the page.
+
+#### left-side-panel,
+#### left-side-bar
+Adaptive left side column.
+
+#### content-panel,
+#### content-bar
+The panel for main content of the site.
+
+#### right-side-panel,
+#### right-side-bar
+Adaptive right side column.
+
+#### fixed-right-side-panel,
+#### fixed-right-side-bar
+Vertical bar or panel fixed at the right edge of page, always visible, not scrolled.
+
+#### text-box
+Padded text block 50% page width, joined in one or two columns list.
+
+#### footer-panel,
+#### footer-bar
+Panel at the bottom of page, scrolls with the page.
+
+#### fixed-bottom-panel,
+#### fixed-bottom-bar
+footer fixed at the bottom edge of the page, always visible, not scrolled.
+
+-->
+
+<!--content-panel
+
+## Layout
+
+To display a certain section of the page insert named section in the text:
+<pre><code>[encode][off]&lt;!--right-side-panel
+Example Navigation:
+
+* [Home](index.html)
+  * [Installation](index.html#Installation)
+  * [Pre-defined section names](index.html#pre-defined-section-names-)
+* [Layout](layout.html)
+--&gt;
+[/off][/encode]</code></pre>
+
+### Default layout scheme
+
+<small>
+<table>
+<tr><td colspan="3">fixed-top-panel</td></tr>
+<tr><td colspan="3">header-panel</td></tr>
+<tr><td>left-side-panel</td><td style="width:40%;padding-bottom:35%;">content-panel</td><td>right-side-panel</td></tr>
+<tr><td colspan="3">footer-panel</td></tr>
+<tr><td colspan="3">fixed-bottom-panel</td></tr>
+</table>
+</small>
+
+Predefined order ($DOC.order) of the sections can be overriden by placeholders [encode][off]&lt;!--section-name--&gt;[/off][/encode]
+Previously defined sections can be overriden or removed by [encode][off]&lt;!--section-name --&gt;[/off][/encode]
+
+Predefined layout scheme can be overridden in several ways:
+* by adding sections with customized block (syntax [encode][off]&lt;!--[block`some css style] ... --&gt;[/off][/encode]
+* by customizing CSS table
+* by using bootstrap grid system within the sections
+* by using special layout components
+
+### Layout components
+
+[page-layout]({{=$DOC.root}}components/controls.page-layout.html) component allows you to change the page layout.
+
+#### Examples:
+
+[2-column, center-aligned, fixed width or adaptive layout]({{=$DOC.root}}examples/2-columns-center-aligned.html)
+
+
+-->
+
+
+
+<!--right-side-panel
+<br>
+Example Navigation:
+
+* [Layout](#layout)
+* [Default layout scheme](#default-layout-scheme)
+* [Grid example](#more-complex-layout-can-be-created-by-using-bootstrap-grid-system-)
+
+<br>
+[well`display:inline-block; padding:16px; border-radius:4px; background-color:#fcf5b9; box-shadow:1px 1px 5px #888888;] This is the right side panel. The layout of this column is adaptive. [/well]
+
+-->
+
+<!--[block`fixed-right-side-panel width:200px; box-shadow:0px -1px 3px #888888]
+<br>
+Example Navigation:
+
+* [Layout](#layout)
+* [Default layout scheme](#default-layout-scheme)
+* [Grid example](#more-complex-layout-can-be-created-by-using-bootstrap-grid-system-)
+
+<br>
+[well`display:inline-block; padding:16px; border-radius:4px; background-color:#fcf5b9; box-shadow:1px 1px 5px #888888]
+  This is the fixed right side panel, it is always visible.
+[/well]
+
+-->
+
+<!--footer-bar
+***
+[block`col-md-offset-1] ### More complex layout can be created by using bootstrap grid system. [/block]
+<br>
+[block`row]
+  [well`col-md-4 col-md-offset-1] More complex layout [/well]
+  [well`col-md-3 col-md-offset-3] can be created [/well]
+[/block]
+
+[block`row]
+  [well`col-md-3 col-md-offset-3] by using [/well]
+  [well`col-md-3 col-md-offset-1] bootstrap grid system [/well]
+[/block]
+
+***
+-->
+
+<!--footer-panel-->
+
+
+
+<noscript><div class="alert alert-warning">This Website requires your browser to be JavaScript enabled.</div></noscript>
+
+
+</body>
+</html>
