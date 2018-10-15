@@ -1,11 +1,10 @@
-# CPH:SEC
-## A Scriptkiddies Guide to Web Hacking Using Automatic Tools
+## CPH:SEC - A Scriptkiddies Guide to Web Hacking Using Automatic Tools
 ##### v. 0.5 beta
 
 _Disclaimer & Caveat Lector: This article is for educational purposes only. The author is not responsible for any misuse or wrong doing. Always follow the law, whitehat hacking ethics and good business practice as well as industry standards._
 
-By Shiva  : https://github.com/Shiva108 @ CPH:SEC : https://cph-sec.github.io/
-Corrections by MThirup: https://hackerone.com/mthirup
++ By Shiva @ CPH:SEC    : https://cph-sec.github.io/
++ Corrections by MThirup: https://hackerone.com/mthirup
 
 
 
@@ -28,10 +27,6 @@ Corrections by MThirup: https://hackerone.com/mthirup
 6. #### [Scenarios](#scenarios)
   1. WordPress Site
 
-
----
-### <a id="xxx"></a>xxx
----
 
 ### <a id="Introduction"></a>Introduction
 
@@ -62,9 +57,7 @@ OPSEC is a large topic and as so it is impossible to cover all in this guide. He
 + Dont use google, use duckduckgo instead: https://duckduckgo.com/ or on dark web: http://3g2upl4pq6kufc4m.onion/ .
 
 
-<p align="center">
 ![image](vpnstor2.png)
-</p>
 
 
 ##### Surf:
