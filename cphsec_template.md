@@ -46,7 +46,7 @@ _Example of link / reference_ : Some interesting tekst that requires reference'.
 + ²Reference tekst: https://www.whateverlink.gov
 + ³Reference tekst: https://www.whateverlink.gov
 + ⁴Reference tekst: https://www.whateverlink.gov
-+ ⁵Very simple guide to WiFi hacking: https://mango.pdf.zone/hacking-your-neighbours-wifi
++ ⁵Reference tekst: https://www.whateverlink.gov
 
 _Example of code block_
 ```
