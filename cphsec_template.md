@@ -1,4 +1,4 @@
-## CPH:SEC - Your Title (Note: Use good SEO, title should be easy to find on google and sound interesting)
+## CPH:SEC - Your Title (Note: Use good SEO, the title should be easy to find on google and sound interesting)
 ##### v. 0.x x
 
 _Disclaimer & Caveat Lector: This article is for educational purposes only. The author is not responsible for any misuse or wrong doing. Always follow the law, whitehat hacking ethics and good business practice as well as industry standards._
@@ -26,7 +26,7 @@ x. #### [Conclusion](#Conclusion)
 + What is this article about? 
 + What will we learn? 
 + Why is this interesting/important? 
-+ How did you come about this information? 
++ How did you stumble upon this information? 
 + Why did you study this? 
 + Whats in it for me?
 
@@ -46,7 +46,7 @@ _Example of link / reference_ : Some interesting tekst that requires reference'.
 + ²Reference tekst: https://www.whateverlink.gov
 + ³Reference tekst: https://www.whateverlink.gov
 + ⁴Reference tekst: https://www.whateverlink.gov
-+ ⁵Reference tekst: https://www.whateverlink.gov
++ ⁵Very simple guide to WiFi hacking: https://mango.pdf.zone/hacking-your-neighbours-wifi
 
 _Example of code block_
 ```
