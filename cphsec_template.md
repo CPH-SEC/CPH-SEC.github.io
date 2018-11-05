@@ -22,12 +22,12 @@ x. #### [Conclusion](#Conclusion)
 
 ### <a id="Introduction"></a>Introduction
 
- Ideas: 
-+ What is this article about? 
-+ What will we learn? 
-+ Why is this interesting/important? 
-+ How did you stumble upon this information? 
-+ Why did you study this? 
+ Ideas:
++ What is this article about?
++ What will we learn?
++ Why is this interesting/important?
++ How did you stumble upon this information?
++ Why did you study this?
 + Whats in it for me?
 
 
@@ -35,7 +35,7 @@ x. #### [Conclusion](#Conclusion)
 
 
 _Example of image_ : ![image](imagename.png)
-Note: Github/Gitbook does not interpret HTML i.e. using HTML or CSS to center image is futile.
+Note: Github/Gitbook does not interpret HTML in MarkDown documents i.e. using HTML or CSS to center image is futile.
 
 _Example of link / reference_ : Some interesting tekst that requires reference'.
 
@@ -46,7 +46,8 @@ _Example of link / reference_ : Some interesting tekst that requires reference'.
 + ²Reference tekst: https://www.whateverlink.gov
 + ³Reference tekst: https://www.whateverlink.gov
 + ⁴Reference tekst: https://www.whateverlink.gov
-+ ⁵Very simple guide to WiFi hacking: https://mango.pdf.zone/hacking-your-neighbours-wifi
++ ⁵Reference tekst: https://www.whateverlink.gov
+
 
 _Example of code block_
 ```
@@ -66,4 +67,4 @@ _Your text here_
 _Ideas_
 + What did we learn?
 + Whats up next?
-+ Thanks to xx 
++ Thanks to xx
