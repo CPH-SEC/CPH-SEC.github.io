@@ -33,17 +33,23 @@ Furthermore the process for entering your work is described in chapter 4.
 
 MarkDown is to documents what HTML is for web pages i.e. a markup language or as wikipedia desribes it:
 
-> "Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name.[8] Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. As the initial description of Markdown contained ambiguities and unanswered questions, many implementations and extensions of Markdown appeared over the years to answer these issues."
-> Wikipedia¹
+> "Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. As the initial description of Markdown contained ambiguities and unanswered questions, many implementations and extensions of Markdown appeared over the years to answer these issues." Wikipedia¹
 
-Meaning its a document writer "language". The idea is that the writer do not need to all the hazzle with big applications like MS Word or similar.
+Meaning, MD is a document writer "language". The idea is that the writer do not need to all the hazzle with heavy applications like MS-Word or similar.
 
-The document is always available in the new version here: https://github.com/CPH-SEC/CPH-SEC.github.io/blob/master/cphsec_template.md
+To make it easier to get started the CPH:SEC Gitbook template was created and is always available in the newest version here: https://github.com/CPH-SEC/CPH-SEC.github.io/blob/master/cphsec_template.md
 
 Using linux the template can be easely downloaded using wget:
 
 ```
 wget https://github.com/CPH-SEC/CPH-SEC.github.io/blob/master/cphsec_template.md
+```
+
+Or for Windows users with Powershell²:
+
+```
+PS> [System.Net.ServicePointManager]::ServerCertificateValidationCallback = {$true};
+PS> (new-object System.Net.WebClient).DownloadFile("https://github.com/CPH-SEC/CPH-SEC.github.io/blob/master/cphsec_template.md", 'C:\Temp\file')
 ```
 
 The template is simple and gives basic structure, easy for readers to recognize, and gives hints for usage.
@@ -68,6 +74,7 @@ Remember to save as .md with a new name.
 
 #### Surf:
 + ¹Wikipedia, Markdown: https://en.wikipedia.org/wiki/Markdown
++ ²cURL and Wget alternatives for Windows...: https://www.ryadel.com/en/curl-wget-alternatives-windows-command-prompt-powershell/
 
 ### <a id="Entering"></a>Entering An Article, Write-Up or Whitepaper
 
