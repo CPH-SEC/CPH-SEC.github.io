@@ -4,8 +4,8 @@
 
 _Disclaimer & Caveat Lector: This article is for educational purposes only. The author is not responsible for any misuse or wrong doing. Always follow the law, whitehat hacking ethics and good business practice as well as industry standards._
 
-By Shiva  : https://github.com/Shiva108 @ CPH:SEC : https://cph-sec.github.io/
-Corrections by MThirup: https://hackerone.com/mthirup
++ By Shiva  : https://github.com/Shiva108 @ CPH:SEC : https://cph-sec.github.io/
++ Corrections by MThirup: https://hackerone.com/mthirup
 
 
 
