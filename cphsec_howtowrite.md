@@ -1,10 +1,9 @@
 ## CPH:SEC - How to Write for CPH:SEC
-#### v. 0.1  a
+#### v. 0.0.1 beta
 
 _Disclaimer & Caveat Lector: This article is for educational purposes only. The author is not responsible for any misuse or wrong doing. Always follow the law, whitehat hacking ethics, good business practice and industry standards._
 
 + By Shiva @ CPH:SEC : https://cph-sec.github.io/
-
 
 
 ### **Table of Contents**
@@ -16,13 +15,12 @@ _Disclaimer & Caveat Lector: This article is for educational purposes only. The 
 5. #### [Conclusion](#Conclusion)
 
 
-
 ### <a id="Introduction"></a>Introduction
 
-Its the dream to put Copenhagen and Danish white-hat hackers on the world map by creating solid content i.e. hacking guides for the CPH:SEC GitBook.
+It's the dream to put Copenhagen and Danish white hats on the world map by creating solid content i.e. hacking guides for the CPH:SEC GitBook.
 This way both writers and readers can enjoy CPH:SEC hacking guides. High quality guides are in popular demand and so an initiative of corporation is needed.
-This is the dream of the CPH:SEC GitBook project or put simply: **We all like more hacking guides right?**
-Using GitBook for hosting is a free, efficient and somewhat low-tech way to deliver content to readers and is easy to use for a linux user, hacker, programmer and works on all platforms.
+This is the dream of the CPH:SEC GitBook project or put simply: **We all like more quality hacking guides right?**
+Using GitBook for hosting is a free, efficient and somewhat low-tech way to deliver content to readers and is easy to use for a linux user, hacker, programmer and works on all OS.
 Like Github, GitBook supports MarkDown (MD) natively and so to make writing easy there is a CPH:SEC MD template.
 
 This article describes how to use the CPH:SEC .md template and use Atom for doing so. Using Atom is a suggestion, not a requirement.
@@ -31,7 +29,7 @@ Furthermore the process for entering your work is described in chapter 4.
 
 ### <a id="Template"></a>The Markdown Template
 
-MarkDown is to documents what HTML is for web pages i.e. a markup language or as wikipedia desribes it:
+MarkDown is to documents what HTML is to web pages i.e. a markup language or as wikipedia desribes it:
 
 > "Markdown is a lightweight markup language with plain text formatting syntax. It is designed so that it can be converted to HTML and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. As the initial description of Markdown contained ambiguities and unanswered questions, many implementations and extensions of Markdown appeared over the years to answer these issues." Wikipedia¹
 
@@ -39,7 +37,7 @@ Meaning, MD is a document writer "language". The idea is that the writer do not 
 
 To make it easier to get started the CPH:SEC Gitbook template was created and is always available in the newest version here: https://github.com/CPH-SEC/CPH-SEC.github.io/blob/master/cphsec_template.md
 
-Using linux the template can be easely downloaded using wget:
+On linux the template can be easily downloaded using wget:
 
 ```
 wget https://github.com/CPH-SEC/CPH-SEC.github.io/blob/master/cphsec_template.md
@@ -78,14 +76,12 @@ Remember to save as .md with a new name.
 
 ### <a id="Entering"></a>Entering An Article, Write-Up or Whitepaper
 
-When the first draft is done, zip it (including pictures) and send it to: cph-sec@gmail.com
+When the first draft is done, zip it (including pictures) and send it to: cphsec108-(at)- gmail.com
 After review it will be uploaded Github and a notifcation will be sent.
-Assuming that there are no changes the article will be revealed at a good "SEO time", most likely in the afternoon, not in weekends.
+Assuming that there are no changes, the article will be revealed at a good "SEO time", most likely in the afternoon, not in weekends.
 
 
 ### <a id="Conclusion"></a>Conclusion
 
-_Ideas_
-+ What did we learn?
-+ Whats up next?
-+ Thanks to xx
+This concludes the primer. I hope You feel inspired and motivated to make the best hackers GitBook on the WWW and put Danish hackers / CPH:SEC on the world map.
+At the same time You will help both yourself and team members to reach even higher levels.
