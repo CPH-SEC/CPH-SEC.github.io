@@ -29,10 +29,6 @@ Corrections by MThirup: https://hackerone.com/mthirup
   1. WordPress Site
 
 
----
-### <a id="xxx"></a>xxx
----
-
 ### <a id="Introduction"></a>Introduction
 
 This article is a guide in web hacking by using automatic tools and scripts, mainly from github. A guide for so called "newbies" and "scriptkiddies" i.e. wannabe and beginner hackers. This guide uses the common hacking methodology "hacking killchain":
