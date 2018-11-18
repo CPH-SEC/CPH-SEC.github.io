@@ -57,11 +57,7 @@ OPSEC is a large topic and as so it is impossible to cover all in this guide. He
 + Use foreign hardware at best (other than your neighbours WiFi!⁵), never use your own hardware for hacking.
 + Dont use google, use duckduckgo instead: https://duckduckgo.com/ or on dark web: http://3g2upl4pq6kufc4m.onion/ .
 
-
-<p align="center">
 ![image](vpnstor2.png)
-</p>
-
 
 ##### Surf:
 + ¹For more info please see: https://www.hackeroyale.com/how-to-stay-anonymous/
@@ -69,7 +65,6 @@ OPSEC is a large topic and as so it is impossible to cover all in this guide. He
 + ³Hackers Exploit Weak Remote Desktop Protocol Credentials: https://www.bankinfosecurity.com/hackers-exploit-weak-remote-desktop-protocol-credentials-a-10433
 + ⁴Parrot Linux, better than Kali Linux: https://www.parrotsec.org/download-home.php
 + ⁵Very simple guide to WiFi hacking: https://mango.pdf.zone/hacking-your-neighbours-wifi
-
 
 
 ### <a id="list"></a>List of Automatic Hacking Tools
@@ -104,9 +99,7 @@ $ git clone https://github.com/<author>/<toolname>.git
 $ cd <toolname>
 ```
 
-<p align="center">
 ![image](github_download.png)
-</p>
 
 
 In the case of a python script there will frequently be a setup.sh or install.sh file included and often a requirement.txt file.
@@ -128,9 +121,7 @@ This tool is made for much more than auto web hacking but comes in handy for web
 ```
 python ./reconnoitre.py  -t  10.10.10.15 --services -o /home/<output directory>/
 ```
-<p align="center">
 ![image](reconnoitre_scan1.png)
-</p>
 
 
 In the "10.10.10.15" folder Reconnoitre creates a directory structure as result:
@@ -150,9 +141,7 @@ python zeus.py -d inurl:php?id=
 ```
 The result will be similar to this:
 
-<p align="center">
 ![image](zeus_dork_sqli.png)
-</p>
 
 The output reveals the following:
 > + **successfully wrote found items to '/root/Zeus-Scanner/log/url-log/url-log-2.log'**
@@ -160,9 +149,7 @@ The output reveals the following:
 
 Which means the output is stored in '/root/Zeus-Scanner/log/url-log/url-log-2.log' :
 
-<p align="center">
 ![image](zeus_dork_scan_sqli_result.png)
-</p>
 
 Now the Zeus list, of sites that are likely to be vulnerable to SQLi, can be passed on to SQLMAP (an auto SQLi exploitation script) or let Zeus handle it.
 
@@ -173,9 +160,7 @@ python zeus.py –s –d <target website> --sqlmap-args=”threads 5, level=3, r
 ```
 This will use the SQLMAP API and with  SQLMAP output as result.
 
-<p align="center">
 ![image](sqlmapapi_output2.png)
-</p>
 
 
 ### <a id="find"></a>How To Find Hackable Websites
@@ -199,9 +184,7 @@ One of the ways to find hackable websites is to be observant while surfing and u
 This section shows what a hacker can see on a vulnerable site using the aforementioned addons.
 First wappalyzer:
 
-<p align="center">
 ![image](wappalyzer2.png)
-</p>
 
 One gets a lot of interesting information just from this passive recon using WA:
 + CMS type and version: WordPress 4.6.12 - Old version, current is 4.9.8
@@ -215,17 +198,13 @@ Already from this information it can be deducted that the site is running an old
 
 Another example, this time Microsoft web-server:
 
-<p align="center">
 ![image](wapp_iis_2.png)
-</p>
 
 WA reveals that server is running IIS 8.5 and therefore a simple duckduckgo search on "Microsoft IIS 8.5 CVE" (Common Vulnerabilities and Exposures) reveals multiple vulnerabilities for this type of server. One such exploit is MS15-034¹ and allows Remote Code Execution (RCE), or "remote hack" against version 8.5 of IIS. Note that only unpached servers with IIS 8.5 are vulnerable to MS15-034. However this is a web hacking guide, as goes for server hacking look for upcoming articles [Ed./Shiva: Meaning after 10/2018].
 
 The Shodan Firefox addon shows a somewhat different info about websites, meaning exclusively information about the server:
 
-<p align="center">
 ![image](shodan_github2)
-</p>
 
 
 In this case the site is, the well known, github.com. The Shodan browser plugin reveals information such as:
@@ -247,9 +226,7 @@ This information is especially interesting if a site uses a Content Delivery Net
 
 Another, and common way, for hackers to find vulnerable sites is by using specific search terms in search engines, so called dorks¹ or by using scripts that search search engine API's or cache. This was demonstrated earlier in the "Zeus Scanner" chapter. There is a constant evolution in dorks and so the scriptkiddie should continuously keep updated by visiting sites with new dork lists. regularly to know the latest dorks. The main site for dorks is GHDB (Google Hacking Databse)²:
 
-<p align="center">
 ![image](ghdb_joomla.png)
-</p>
 
 In the illustrated example joomla dorks from 2018 are found using GHDB.
 
@@ -273,23 +250,17 @@ Furthermore, many WP plugin developers are amateur enthusiasts with no idea abou
 
 In the following section it is demonstrated how to automatically hack a vulnerable WP site with the "X Attacker" (XA) tool.
 
-<p align="center">
 ![image](xattacker_banner.png)
-</p>
 
 "X Attacker" got several modes, the easiest one is a list of sites from file, which in this case is "sites.txt" with the URL "http://127.0.0.1/wordpress/".
 
 The tool is automatic and the next output is a list of exploits and whether they worked or not.
 
-<p align="center">
 ![image](xattacker_blaze_hack.png)
-</p>
 
 The site has the "Blaze" vulnerability and "X Attacker" auto hacked the site and gives link[?] for uploading of webshell. Visiting the link with the PHP file uploaded by XA looks like this in the browser:
 
-<p align="center">
 ![image](xattacker_shell_upload.png)
-</p>
 
 To upload a shell, "weevely" is utilized:
 
@@ -299,15 +270,11 @@ $ weevely generate verystrongpassword /<output>/<directory>/<shell file name>.ph
 
 The result will look similar to this screenshot:
 
-<p align="center">
 ![image](weeve_gen_shell.png)
-</p>
 
 After uploading the shell XA even provides success messeage.
 
-<p align="center">
 ![image](xattacker_backdoor_up_succes.png)
-</p>
 
 This means the site is hacked and the shell is ready, which means persistency. Just click the "Succes Upload" link to enjoy the backdoored WP site.
 
