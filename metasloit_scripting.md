@@ -221,10 +221,7 @@ The above screenshot shows the executing of the script.
 
 ### <a id="Conclusion"></a>Conclusion
 
-_Ideas_
-+ What did we learn?
-+ Whats up next?
-+ Thanks to xx
+In this guide we learned to improve the use of MSF both by using the build in scripting engine as well as interacting with msfrpc using Python. The reader can go deeper into this subjects by visiting the links in the Surf section.
 
 
 ### <a id="Surf"></a>Surf
