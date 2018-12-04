@@ -17,21 +17,20 @@ _Disclaimer & Caveat Lector: This article is for educational purposes only. The 
     + 1. #### [Auto Listener](#AutoListen)
     + 2. #### [Auto SMB Enum](#AutoSMB)
 6. #### [Going Deeper by Using Python](#Python)
-7. #### [Examples](#TopicN)
-8. #### [Conclusion](#Conclusion)
-9. #### [Surf](#Surf)
+7. #### [Conclusion](#Conclusion)
+8. #### [Surf](#Surf)
 
-
+---
 
 ### <a id="Introduction"></a>Introduction
 
-This article assumes that the reader have some knowledge of Metasploit Framework (MSF) and those who are unfamiliar with the general working should consult "Metasploit Unleashed", the MSFU¹, a free ethical hacking course. Also know as the MSF manual.
+This article assumes that the reader have some knowledge of Metasploit Framework (MSF) and those who are unfamiliar with the general workings should consult "Metasploit Unleashed", the MSFU¹, a free ethical hacking course. Also known as the MSF manual.
 As MSF use can get trivial, it is useful, to know how to automize usage both for convenience an speed. In this article we will learn how to use MSF with scripts with the build in interpreter and some hints on how to use MSF with python.
 
 
 ### <a id="Record"></a>How To Record a MSF Script
 
-The simplest way to make a MSF script is to record one .with the "makerc" command. Simply use MSF as you normally would and then "record" / dump commands into a file. This is similar to record macro in e.g. Miscrosoft Excel.
+The simplest way to make a MSF script is to record one with the "makerc" command. Simply use MSF as you normally would and then "record" / dump commands into a file. This is similar to record macro in e.g. Miscrosoft Excel.
 
 ```
 msf exploit> makerc savefile.rc
@@ -55,8 +54,8 @@ set lport 4447
 exploit -j
 ```
 
-As one can see its nothing more than the commands typed, line by line.
-Next chapter explains how to use/resource as script.
+As one can see its, nothing more than the commands typed, line by line.
+Next chapter explains how to use/resource a script.
 
 
 ### <a id="Use"></a>How To Use/Resource a MSF Script
@@ -67,7 +66,7 @@ When using the recorded script later one can manually edit e.g. the lhost and th
 msf> resource irchack.rc
 ```
 
-And MSF will perform exactly like one had type the commands manually.
+And MSF will perform exactly like one had typed the commands manually, one by one.
 
 ![image](ircautohack.png)
 
@@ -93,7 +92,7 @@ kerberos
 background
 ```
 
-Save the above list of commands in a file named e.g. met_cmd_file.rc. Below the script is executed on a Windows 7 machine that was exploited with EternalBlue (MS17-010), "Blue" machine from HTB. Script must be run from meterpreter session with "resource met_cmd_file.rc".
+Save the above list of commands in a file named e.g. met_cmd_file.rc. Below the script is executed on a Windows 7 machine that was exploited with EternalBlue (MS17-010), the "Blue" machine from HTB. Script must be run from meterpreter session with "resource met_cmd_file.rc".
 
 
 ![image](met_post_rc.png)
@@ -108,7 +107,7 @@ In this section examples of useful scripts are listed and explained.
 
 #### <a id="AutoListen"></a>Auto Listener
 
-Doing CTFs, or pentests, with metasploit one often uses listeners for reverse shells such as the one used earlier with MS17-010. Shown below is the simple code for an auto listener script.
+Doing CTFs, or pen-tests, with metasploit one often uses listeners for reverse shells such as the one used earlier with MS17-010. Shown below is the simple code for an auto listener script.
 
 ```
 use exploit/multi/handler
@@ -119,11 +118,11 @@ exploit -j -z
 jobs
 ```
 
-Naturally, one will have to change "lhost" and payload according to the assignment.
+Naturally, one will have to change "lhost" and payload according to the assignment. Execution is shown below.
 
 ![image](auto_listen.png)
 
-Fast and effective execution.
+Fast and effective.
 
 
 #### <a id="#AutoSMB"></a>Auto SMB Enum
@@ -149,7 +148,7 @@ use auxiliary/scanner/smb/smb_version
 run
 ```
 
-In the example below the auto smb enum script is run against HTB machines "Optimum" and "Blue".
+In the example below the auto SMB enum script is run against HTB machines "Optimum" and "Blue".
 
 ![image](msf_smb_enum.png)
 
@@ -158,7 +157,7 @@ Useful for most engagements.
 
 ### <a id="#Python"></a>Going Deeper by Using Python
 
-What if MSF could be combined with the hackers favorite programming language python? Much could be achieved indeed. Luckily such a framework exists, namely PyMetasploit⁴ which is somewhat newer than Spiderlabs msfrpc⁵. For installation of either refer to the respective Github repos⁴/⁵. PyMetasploit describes itself as:
+What if MSF could be combined with the hackers favorite programming language Python? Much could be achieved indeed. Luckily such a framework exists, namely PyMetasploit⁴ which is somewhat newer than the Spiderlabs msfrpc⁵ equivalent. For installation of either refer to the respective Github repos⁴/⁵. PyMetasploit describes itself as:
 
 > _PyMetasploit is a full-fledged msfrpc library for Python. It is meant to interact with the msfrpcd daemon that comes with the latest versions of Metasploit. It does NOT interact with the console-based scripts that Metasploit provides such as msfconsole, msfvenom, etc. Therefore, before you can begin to use this library, you'll need to initialize msfrpcd and optionally (highly recommended) PostgreSQL._
 
@@ -191,7 +190,7 @@ $> msfrpcd -P '' -U msf
 ```
 ![image](msfrpcdstart.png)
 
-Obviously the two "from/import" lines imports the msfrpc modules in usual python fashion and enables os to work with Msfrpc. The code:
+Obviously the two "from/import" lines imports the msfrpc modules in usual Python fashion and enables os to work with Msfrpc. The code:
 
 ```
 exploits = client.modules.exploits
@@ -206,13 +205,13 @@ client.modules.payloads
 client.modules.post
 ```
 
-After the console initiated one can activate an exploit with the use method:
+After the console object is initiated one can activate an exploit with the use method:
 
 ```
 console.execute('use exploit/multi/http/tomcat_mgr_deploy')
 ```
 
-Which is comparable to command that is used for msfconsole, same goes for the following lines of code. The same goes the scripts following "console.execute" commands.
+Which is comparable to commands used for msfconsole, same goes the scripts following "console.execute" commands.
 
 
 ![image](pymsfrpcd.png)
@@ -238,4 +237,3 @@ _Ideas_
 + ⁴Pymetasploit repo on Github: https://github.com/allfro/pymetasploit
 + ⁵Msfrpc Spiderlabs Github repo: https://github.com/SpiderLabs/msfrpc
 + ⁶Mastering Python for Networking and Security: https://www.packtpub.com/mapt/book/networking_and_servers/9781788992510/9/ch09lvl1sec82/connecting-metasploit-with-pymetasploit
-+ ⁷
