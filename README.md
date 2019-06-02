@@ -4,7 +4,7 @@
 ## Copenhagen Ethical Hacking and Penetration Testing Society
 
 ### Index
-[CPH:SEC - A Scriptkiddies Guide to Web Hacking Using Automatic Tools:](https://cph-sec.github.io/scriptkiddie.md)
+[CPH:SEC - A Scriptkiddies Guide to Web Hacking Using Automatic Tools:](scriptkiddie.md)
 [CPH:SEC - How to Build a Covert Pentesting Infrastructure Almost Free - Part 1:](https://CPH-SEC.github.io/pentestinfra.md)
 [CPH:SEC - Using Metasploit Framework the Right Way - With Scripts:](https://CPH-SEC.github.io/metasloit_scripting.md)
 
