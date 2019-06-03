@@ -5,7 +5,7 @@ github: https://github.com/CPH-SEC/CPH-SEC.github.io
 about: This is the Github Knowledge Resource by CPH:SEC
 disqus_shortname: cphsec
 google_analytics: UA-XXXXXXXX-Y
-avatar_url: /static/img/avatar.jpg
+avatar_url: avatarcphsec.png
 
 enableTags: true
 tagarray: []
@@ -17,29 +17,23 @@ collections:
 
 social:
     - icon: fa-facebook
-      link: "#"
-    - icon: fa-twitter
-      link: "#"
+      link: "https://www.facebook.com/groups/CPHSEC"
     - icon: fa-linkedin
-      link: "#"
-    - icon: fa-stack-exchange
-      link: "#"
+      link: "https://www.linkedin.com/company/cph-sec/"
     - icon: fa-github
-      link: "https://github.com/agusmakmun"
+      link: "https://github.com/CPH-SEC"
 
 share:
   twitter_username: github.io
   fb_appid: 1749788565247320
 
 urls:
-    - text: About Me
+    - text: About
       url: /about/
-    - text: My Projects
-      url: /projects/
     - text: XML Feed
       url: /feed.xml
 
-url: "https://agusmakmun.github.io"
+url: "https://cph-sec.github.io/"
 baseurl: ""
 paginate: 20
 per_page: 20
