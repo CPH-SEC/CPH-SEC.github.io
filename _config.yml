@@ -1,11 +1,11 @@
-title: Stack Problems
-description: My Personal Stack Problems
-author: Agus Makmun
-github: https://github.com/agusmakmun
-about: I'm Programmer for Python & Django. I've made quite a few web apps, especially on Django.
-disqus_shortname: stackproblems
+title: CPH:SEC
+description: Copenhagen Ethical Hacking and Penetrations Testing Society
+author: CPH:SEC
+github: https://github.com/CPH-SEC/CPH-SEC.github.io
+about: CPH:SEC Resource Library
+disqus_shortname: cphsec
 google_analytics: UA-XXXXXXXX-Y
-avatar_url: /static/img/avatar.jpg
+avatar_url: avatarcphsec.png
 
 enableTags: true
 tagarray: []
@@ -16,16 +16,12 @@ collections:
     permalink: /project/:path/
 
 social:
-    - icon: fa-facebook
-      link: "#"
-    - icon: fa-twitter
-      link: "#"
-    - icon: fa-linkedin
-      link: "#"
-    - icon: fa-stack-exchange
-      link: "#"
-    - icon: fa-github
-      link: "https://github.com/agusmakmun"
+  - icon: fa-facebook
+    link: "https://www.facebook.com/groups/CPHSEC"
+  - icon: fa-linkedin
+    link: "https://www.linkedin.com/company/cph-sec/"
+  - icon: fa-github
+    link: "https://github.com/CPH-SEC"
 
 share:
   twitter_username: github.io
@@ -34,12 +30,9 @@ share:
 urls:
     - text: About Me
       url: /about/
-    - text: My Projects
-      url: /projects/
-    - text: XML Feed
-      url: /feed.xml
 
-url: "https://agusmakmun.github.io"
+
+url: "https://cph-sec.github.io/"
 baseurl: ""
 paginate: 20
 per_page: 20
