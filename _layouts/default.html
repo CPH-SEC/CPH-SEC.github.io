@@ -7,7 +7,7 @@ layout: compress
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.png" />
+    <link href="../favicon.png" rel="shortcut icon"/>
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.author }}{% endif %}</title>
     <meta name="author" content="{{ site.author }}" />
     <meta name="description" content="{% if page.title %}{{ page.title }}{% else %}{{ site.description }}{% endif %}" />
@@ -61,7 +61,7 @@ layout: compress
       {% endfor %}
     {% endif %}
 
-    <meta name="twitter:card" content="summary">
+<!--    <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@{{ site.share.twitter_username }}">
     <meta name="twitter:creator" content="@{{ site.share.twitter_username }}">
 
@@ -82,7 +82,7 @@ layout: compress
     {% endif %}
 
     {% if page.header-img %}
-      <meta name="twitter:image:src" content="{{ site.url }}/{{ page.header-img }}">
+      <meta name="twitter:image:src" content="{{ site.url }}/{{ page.header-img }}">-->
     {% endif %}
 
     <!-- Font awesome icons -->
@@ -135,14 +135,14 @@ layout: compress
             <ul class="search__results" id="js-search__results"></ul>
           </div>
           <hr />
-          <ul class="sidebar-nav">
+<!--          <ul class="sidebar-nav">
             <strong>Navigation</strong>
             <li><a href="/">Home</a></li>
             {% for i in site.urls %}
               <li><a class="about" href="{{ i.url }}">{{ i.text }}</a></li>
             {% endfor %}
           </ul>
-        </div>
+        </div>-->
         <!-- end /.fixed-condition -->
       </div>
       <div class="col-sm-8 col-offset-1 main-layout">
