@@ -1,0 +1,51 @@
+title: CPH:SEC
+description: Copenhagen Ethical Hacking and Penetrations Testing Society
+author: CPH:SEC
+github: https://github.com/CPH-SEC/CPH-SEC.github.io
+about: CPH:SEC Resource Library
+disqus_shortname: cphsec
+google_analytics: UA-XXXXXXXX-Y
+avatar_url: avatarcphsec.png
+
+enableTags: true
+tagarray: []
+
+collections:
+  project:
+    output: true
+    permalink: /project/:path/
+
+social:
+    - icon: fa-facebook
+      link: "https://www.facebook.com/groups/CPHSEC"
+    - icon: fa-linkedin
+      link: "https://www.linkedin.com/company/cph-sec/"
+    - icon: fa-github
+      link: "https://github.com/CPH-SEC"
+
+share:
+  twitter_username: github.io
+  fb_appid: 1749788565247320
+
+urls:
+    - text: About
+      url: /about/
+#    - text: XML Feed
+#      url: /feed.xml
+
+url: "https://cph-sec.github.io/"
+baseurl: ""
+paginate: 20
+per_page: 20
+paginate_path: "/page/:num/"
+markdown: kramdown
+gems:
+  - jekyll-paginate
+  - jekyll-gist
+
+compress_html:
+  clippings: all
+  comments: ["<!-- ", " -->"]
+  endings: all
+  ignore:
+    envs: ['development']
