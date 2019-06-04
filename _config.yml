@@ -27,9 +27,9 @@ share:
   twitter_username: github.io
   fb_appid: 1749788565247320
 
-#urls:
-#    - text: About
-#      url: /about/
+urls:
+    - text: About
+      url: /about/
 #    - text: XML Feed
 #      url: /feed.xml
 
