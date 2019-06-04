@@ -1,8 +1,8 @@
 title: CPH:SEC
 description: Copenhagen Ethical Hacking and Penetrations Testing Society
-author: Shiva108
+author: CPH:SEC
 github: https://github.com/CPH-SEC/CPH-SEC.github.io
-about: This is the Github Knowledge Resource by CPH:SEC
+about: CPH:SEC Resource Library
 disqus_shortname: cphsec
 google_analytics: UA-XXXXXXXX-Y
 avatar_url: avatarcphsec.png
@@ -27,11 +27,11 @@ share:
   twitter_username: github.io
   fb_appid: 1749788565247320
 
-urls:
-    - text: About
-      url: /about/
-    - text: XML Feed
-      url: /feed.xml
+#urls:
+#    - text: About
+#      url: /about/
+#    - text: XML Feed
+#      url: /feed.xml
 
 url: "https://cph-sec.github.io/"
 baseurl: ""
