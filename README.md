@@ -8,7 +8,10 @@
 [CPH:SEC - How to Build a Covert Pentesting Infrastructure Almost Free - Part 1:](https://CPH-SEC.github.io/pentestinfra.md)
 [CPH:SEC - Using Metasploit Framework the Right Way - With Scripts:](https://CPH-SEC.github.io/metasloit_scripting.md)
 
+{% include_relative scriptkiddie.md %}
+{% include_relative https://CPH-SEC.github.io/pentestinfra.md %}
 
+--
 [CPH:SEC - How to Write for CPH:SEC:](https://CPH-SEC.github.io/cphsec_howtowrite.md)
 [CPH:SEC - Template:](https://CPH-SEC.github.io/cphsec_template.md)
 
