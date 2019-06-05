@@ -27,11 +27,9 @@ share:
   twitter_username: github.io
   fb_appid: 1749788565247320
 
-urls:
-    - text: Web Hacking For Script Kiddies
-      url: /scriptkiddies/
-    - test: Covert Penetration Testing Infrasctructure
-      url: /pentestinfra/
+#urls:
+#    - text: Web Hacking For Script Kiddies
+#      url: /scriptkiddies/
 
 
 url: "https://cph-sec.github.io/"
