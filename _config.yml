@@ -28,8 +28,10 @@ share:
   fb_appid: 1749788565247320
 
 urls:
-    - text: About Me
-      url: /about/
+    - text: Web Hacking For Script Kiddies
+      url: /scriptkiddies/
+    - test: Covert Penetration Testing Infrasctructure
+    - url: /pentestinfra/
 
 
 url: "https://cph-sec.github.io/"
@@ -48,3 +50,6 @@ compress_html:
   endings: all
   ignore:
     envs: ['development']
+
+kramdown:
+  auto_ids: true
