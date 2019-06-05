@@ -50,6 +50,3 @@ compress_html:
   endings: all
   ignore:
     envs: ['development']
-
-kramdown:
-  auto_ids: true
