@@ -30,7 +30,7 @@ share:
 urls:
     - text: Web Hacking For Script Kiddies
       url: /scriptkiddies/
-    - test: Covert Penetration Testing Infrasctructure
+    - test: /Covert Penetration Testing Infrasctructure/
     - url: /pentestinfra/
 
 
