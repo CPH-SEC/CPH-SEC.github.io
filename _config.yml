@@ -30,8 +30,8 @@ share:
 urls:
     - text: Web Hacking For Script Kiddies
       url: /scriptkiddies/
-    - test: /Covert Penetration Testing Infrasctructure/
-    - url: /pentestinfra/
+    - test: Covert Penetration Testing Infrasctructure
+      url: /pentestinfra/
 
 
 url: "https://cph-sec.github.io/"

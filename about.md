@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Scriptkiddies
-permalink: /scriptkiddies/
+permalink: /scriptkiddies.md
 ---
 
 Testing 
