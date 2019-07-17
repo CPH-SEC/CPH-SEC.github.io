@@ -11,8 +11,8 @@ _Disclaimer & Caveat Lector: This article is for educational purposes only. The 
 1. #### [Introduction](#Introduction)
 2. #### [List of bug bounty platforms and programs](The-list)
 3. #### [How to get started](#How)
-4. #### [TopicN](#TopicN)[?]
-5. #### [TopicN](#TopicN)[?]
+4. #### [TopicN](#Recon)[Recon]
+5. #### [TopicN](#Burp Suite)
 6. #### [Conclusion](#Conclusion)
 
 
@@ -33,25 +33,23 @@ First of all, it's important to keep track on all the bug bounty programs. Most 
 
 Hackerone is the biggest bug bounty platform in the world, which has a huge list of programs to be explored. The positive side of hackerone is that there are plenty of programs to try out, which makes it possible to grind on the platform, if you have the dedication for it. However, you are competing against 200.000+ other hackers in identifying the vulnerabilities first, and most programs start out as invite-only for some few people. As soon as you get your first points going, you will get invited to participate in programs before other people, but you will have a disadvantage, when you start. As soon as you have made some submissions, remember to mark your specialist skills set under your profile, as shown in the picture below. You need to have 3 submissions, that are worth showing off within a topic to have your primary skill approved by the hackerone staff, but do it as soon as you can to get invited to programs, that are more suitable for you.
 
-[image](insert billede her.jpg) _[?] Billede mangler_
-
-
 #### Synack
 
 ![image](Synack_Logo_in_2017.jpg)
 
 [Synack](https://hackerone.com/directory)
 
-Synack is a closed platform, where you need to be approved for your skills, experience etc. to test for them. _[?] Har du ikke mere at sige om synack? For og imod de andre_
+Synack is a closed platform, where you need to be approved for your skills from bug bounties or pentesting. This means that Synack is a good platform for the experienced hackers, who can get approved. However, if you're only getting started with bug bounties, it is recommended to see Synack as a potential "next step" for later on
 
 #### Bugcrowd, Cobalt and Intigrity:
 
-Bugcrowd¹, Cobalt² and Intigrity³ are platforms that are very identical to hackerone, but just smaller. Bugcrowd, cobalt and intigrity also have public and invite-only programs, while some reward you in payments, others give kudos/hall of fame.
+Bugcrowd¹, Cobalt², Intigrity³ and yeswehack⁴ are platforms that follow the same concept as hackerone, but just smaller. Bugcrowd, cobalt and intigrity also have public and invite-only programs, while some reward you in payments and others give kudos/hall of fame.
 
 #### Surf:
 + ¹Bugcrowd: https://www.bugcrowd.com/
 + ²Cobalt: https://cobalt.io/
 + ³Intigrity: https://www.intigriti.com/public/
++ ⁴Yeswehack: https://www.yeswehack.com/
 
 ### <a id="How"></a>How to get started
 
