@@ -1,9 +1,9 @@
 ## CPH:SEC - A beginner's guide to bug bounties
 ##### v. 0.2 A
 
-_Disclaimer & Caveat Lector: This article is for educational purposes only. The author is not responsible for any misuse or wrong doing. Always follow the law, whitehat hacking ethics and good business practice as well as industry standards._
+_Disclaimer & Caveat Lector: This article is for educational purposes only. The author is not responsible for any misuse or wrong doing. Always follow the law, white-hat hacking ethics and good business practice as well as industry standards._
 
-+ By Martin Thirup @ CPH_SEC: http://hackerone.com/mthirup
++ By Martin Thirup @ CPH:SEC: http://hackerone.com/mthirup
 
 
 ### **Table of Contents**
@@ -11,19 +11,19 @@ _Disclaimer & Caveat Lector: This article is for educational purposes only. The 
 1. #### [Introduction](#Introduction)
 2. #### [List of bug bounty platforms and programs](The-list)
 3. #### [How to get started](#How)
-4. #### [TopicN](#TopicN)
-5. #### [TopicN](#TopicN)
+4. #### [TopicN](#TopicN)[?]
+5. #### [TopicN](#TopicN)[?]
 6. #### [Conclusion](#Conclusion)
 
 
 ### <a id="Introduction"></a>Introduction
 
-This article is for people, who are looking for legal ways to use their pentesting skills to challenge themselves. There are multiple opportunities, depending on what you find exciting and your primary areas. This chapter will focus on web-hacking due to the fact that it is the most common scope at bug bounty programs. However, there are bug bounty programs for network hacking, mobile app hacking, iot hacking and more.
+This article is for people, who are looking for legal ways to use their pentesting skills to challenge themselves. There are multiple opportunities, depending on what you find exciting and your primary areas. This chapter will focus on web-hacking due to the fact that it is the most common scope at bug bounty programs. However, there are bug bounty programs for network hacking, mobile app hacking, IoT hacking and more.
 
 
 ### <a id="The-list"></a>List of Bug Bounty Platforms and Programs
 
-First of all, it's important to keep track on all the bug bounty programs. Most of the programs are typically located at platforms like hackerone, bugcrowd, synack, cobalt, intigrity or others. However, some companies like Microsoft, AT&T, Apple, google, facebook and others prefer to run their programs without these platforms, so of course we will look into those later on in this guide aswell. Here's a short summary over the different bug bounty platforms.
+First of all, it's important to keep track on all the bug bounty programs. Most of the programs are typically located at platforms like hackerone, bugcrowd, synack, cobalt, intigrity or others. However, some companies like Microsoft, AT&T, Apple, google, facebook and others prefer to run their programs without these platforms, so of course we will look into those later on in this guide as-well. Here's a short summary over the different bug bounty platforms.
 
 #### Hackerone
 
@@ -50,7 +50,7 @@ Bugcrowd¹, Cobalt² and Intigrity³ are platforms that are very identical to ha
 
 #### Surf:
 + ¹Bugcrowd: https://www.bugcrowd.com/
-+ ²Cobalt: https://cobalt.io/ _[?] (er det korrekt link?)_
++ ²Cobalt: https://cobalt.io/
 + ³Intigrity: https://www.intigriti.com/public/
 
 ### <a id="How"></a>How to get started
@@ -59,18 +59,18 @@ My personal advice: Start out with programs that give points, but don't pay cash
 
 ### <a id="Recon"></a>Recon
 
-Always start out with some good reconnaisance before you start hacking. There are people all around the world, who want to identify vulnerabilities just like you, so always try to find the weak link, where others aren't looking. If a domain has an open scope, where and subdomain is eligible, get sublist3r¹ started to identify subdomains. Also, it's a good idea to get familiar with google dorking to find subdomains, that look interesting. Google dorking is a bigger subject for itself, but learn how to use the search operators depending on what you are looking for. But as an example, if a vulnerability had just been discovered in apache struts, it would be obvious to search for site:example.com ext:action. Nmap scripting is also a good way to identify interesting information or vulnerabilities. If you are looking for interesting directories or specific CMS systems, http-enum is recommended, as it would show you which domains had a directory called /wordpress/ or /blog/ or domains containing /wp-admin.php. Drupal can be identified, if it has a file containing /CHANGELOG.txt in caps and so on. If you're lucky, you might even find an sql dump or other sensitive information thanks to http-enum. All in all, your recon depends on, what you're looking for
+Always start out with some good reconnaissance before you start hacking. There are people all around the world, who want to identify vulnerabilities just like you, so always try to find the weak link, where others aren't looking. If a domain has an open scope, where and subdomain is eligible, get sublist3r¹ started to identify subdomains. Also, it's a good idea to get familiar with google dorking to find subdomains, that look interesting. Google dorking is a bigger subject for itself, but learn how to use the search operators depending on what you are looking for. But as an example, if a vulnerability had just been discovered in Apache struts, it would be obvious to search for site:example.com ext:action. Nmap scripting is also a good way to identify interesting information or vulnerabilities. If you are looking for interesting directories or specific CMS systems, http-enum is recommended, as it would show you which domains had a directory called /wordpress/ or /blog/ or domains containing /wp-admin.php. Drupal can be identified, if it has a file containing /CHANGELOG.txt in caps and so on. If you're lucky, you might even find an sql dump or other sensitive information thanks to http-enum. All in all, your recon depends on, what you're looking for
 
 #### Surf:
 + ¹https://github.com/aboul3la/Sublist3r
 
-### <a id="Burp Suite"></a>Reconnaisance through burp
+### <a id="Burp Suite"></a>Reconnaissance through Burp Suite
 
-Burp suite is the most important tool for web hackers. The proxy allows you to intercept the traffic you make through the domains in the scope and manipulate the data in an easier way to identify vulnerabilities. Getting started with burp suite is an important chapter for itself, which is best to read about on portswigger's website¹. My first step is always to load the list of subdomains identified through Sublist3r. Save the list and go to target -> scope and use load to enter all the subdomains. Load all the urls through urlopener.net, and you will soon see that all the active hosts will show up in the Site Map tab with some few discoveries for the some of the hosts. At this point, it's all about crawling the hosts to have a good overview over the systems. You can sort through parameterized requests or MIME(HTML,SWF,XML etc). By clicking the filter tab above the hosts, you can filter out all the results in the same way. I always try defining the scope to only show file extensions as asp,aspx,jsp,php,do,action,cfm,cgi,dll,swf,fcc,pl. Try removing some of them to find uncommon file types depending on how your results look. 
+Burp suite is the most important tool for web hackers. The proxy allows you to intercept the traffic you make through the domains in the scope and manipulate the data in an easier way to identify vulnerabilities. Getting started with burp suite is an important chapter for itself, which is best to read about on portswigger's website¹. My first step is always to load the list of subdomains identified through Sublist3r. Save the list and go to target -> scope and use load to enter all the subdomains. Load all the urls through urlopener.net, and you will soon see that all the active hosts will show up in the Site Map tab with some few discoveries for the some of the hosts. At this point, it's all about crawling the hosts to have a good overview over the systems. You can sort through parameterized requests or MIME(HTML,SWF,XML etc). By clicking the filter tab above the hosts, you can filter out all the results in the same way. I always try defining the scope to only show file extensions as asp,aspx,jsp,php,do,action,cfm,cgi,dll,swf,fcc,pl. Try removing some of them to find uncommon file types depending on how your results look.
 
-### <a id="Conslusion"></a>Conslusion
+### <a id="Conclusion"></a>Conclusion
 
-I will not go into the steps of identifying vulnerabilities in this tutorial due to the large amount of coverage it would take. OWASP¹ has a lot of useful articles, together with the repository called payloadsallthethings¹². Otherwise, google is always your friend. Hacking is about learning and finding your own preferred patterns of identifying vulnerabilities, so keep hacking to learn
+I will not go into the steps of identifying vulnerabilities in this tutorial due to the large amount of coverage it would take. OWASP¹ has a lot of useful articles, together with the repository called payloadsallthethings¹². Otherwise, google is always your friend. Hacking is about learning and finding your own preferred patterns of identifying vulnerabilities, so keep hacking to learn.
 
 #### Surf:
 + ¹https://portswigger.net/burp/documentation/desktop/getting-started
