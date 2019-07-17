@@ -23,7 +23,7 @@ This article is for people, who are looking for legal ways to use their pentesti
 
 ### <a id="The-list"></a>List of Bug Bounty Platforms and Programs
 
-First of all, it's important to keep track on all the bug bounty programs. Most of the programs are typically located at platforms like hackerone, bugcrowd, synack, cobalt, intigrity or others. However, some companies like Microsoft, AT&T, Apple, google, Facebook and others prefer to run their programs without these platforms. The best way to find them is by using google and looking at lists like the one at Firebounty https://firebounty.com/ 
+First of all, it's important to keep track on all the bug bounty programs. Most of the programs are typically located at platforms like hackerone, bugcrowd, synack, cobalt, intigrity or others. However, some companies like Microsoft, AT&T, Apple, google, facebook and others prefer to run their programs without these platforms. The best way to find these is by using google or looking for public lists like Firebounty https://firebounty.com/
 
 #### Hackerone
 
