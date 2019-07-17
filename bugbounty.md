@@ -12,7 +12,7 @@ _Disclaimer & Caveat Lector: This article is for educational purposes only. The 
 2. #### [List of bug bounty platforms and programs](#The-list)
 3. #### [How to get started](#How)
 4. #### [Recon](#Recon)
-5. #### [Recon through Burp Suite](#Burp Suite)
+5. #### [Reconnaissance through Burp Suite](#Burp Suite)
 6. #### [Conclusion](#Conclusion)
 
 
