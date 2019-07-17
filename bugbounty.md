@@ -12,7 +12,7 @@ _Disclaimer & Caveat Lector: This article is for educational purposes only. The 
 2. #### [List of bug bounty platforms and programs](#The-list)
 3. #### [How to get started](#How)
 4. #### [Recon](#Recon)
-5. #### [Reconnaissance through Burp Suite](#Burp Suite)
+5. #### [Reconnaissance through Burp Suite](#Burp)
 6. #### [Conclusion](#Conclusion)
 
 
@@ -62,7 +62,7 @@ Always start out with some good reconnaissance before you start hacking. There a
 #### Surf:
 + ¹https://github.com/aboul3la/Sublist3r
 
-### <a id="Burp Suite"></a>Reconnaissance through Burp Suite
+### <a id="Burp"></a>Reconnaissance through Burp Suite
 
 Burp suite is the most important tool for web hackers. The proxy allows you to intercept the traffic you make through the domains in the scope and manipulate the data in an easier way to identify vulnerabilities. Getting started with burp suite is an important chapter for itself, which is best to read about on portswigger's website¹. My first step is always to load the list of subdomains identified through Sublist3r. Save the list and go to target -> scope and use load to enter all the subdomains. Load all the urls through urlopener.net, and you will soon see that all the active hosts will show up in the Site Map tab with some few discoveries for the some of the hosts. At this point, it's all about crawling the hosts to have a good overview over the systems. You can sort through parameterized requests or MIME(HTML,SWF,XML etc). By clicking the filter tab above the hosts, you can filter out all the results in the same way. I always try defining the scope to only show file extensions as asp,aspx,jsp,php,do,action,cfm,cgi,dll,swf,fcc,pl. Try removing some of them to find uncommon file types depending on how your results look.
 
