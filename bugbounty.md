@@ -9,10 +9,10 @@ _Disclaimer & Caveat Lector: This article is for educational purposes only. The 
 ### **Table of Contents**
 
 1. #### [Introduction](#Introduction)
-2. #### [List of bug bounty platforms and programs](The-list)
+2. #### [List of bug bounty platforms and programs](#The-list)
 3. #### [How to get started](#How)
-4. #### [TopicN](#Recon)[Recon]
-5. #### [TopicN](#Burp Suite)
+4. #### [Recon](#Recon)
+5. #### [Recon through Burp Suite](#Burp Suite)
 6. #### [Conclusion](#Conclusion)
 
 
@@ -23,7 +23,7 @@ This article is for people, who are looking for legal ways to use their pentesti
 
 ### <a id="The-list"></a>List of Bug Bounty Platforms and Programs
 
-First of all, it's important to keep track on all the bug bounty programs. Most of the programs are typically located at platforms like hackerone, bugcrowd, synack, cobalt, intigrity or others. However, some companies like Microsoft, AT&T, Apple, google, facebook and others prefer to run their programs without these platforms, so of course we will look into those later on in this guide as-well. Here's a short summary over the different bug bounty platforms.
+First of all, it's important to keep track on all the bug bounty programs. Most of the programs are typically located at platforms like hackerone, bugcrowd, synack, cobalt, intigrity or others. However, some companies like Microsoft, AT&T, Apple, google, Facebook and others prefer to run their programs without these platforms. The best way to find them is by using google and looking at lists like the one at Firebounty https://firebounty.com/ 
 
 #### Hackerone
 
